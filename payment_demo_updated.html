@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Payment – Free Redeem Code Generator</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap');
+*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:'Baloo 2',sans-serif;color:#fff;background:radial-gradient(circle at 20% 15%,#294b8f 0,#11151f 42%,#090c12 72%,#2c0c49 100%);display:flex;justify-content:center}
+.page{width:100%;max-width:650px;padding:18px 16px 50px}.hero{text-align:center;padding:12px 0 20px}.app-icon{width:110px;height:110px;margin:auto;border-radius:28px;display:grid;place-items:center;font-size:48px;background:linear-gradient(145deg,#0b77ff,#16223f);box-shadow:0 10px 35px #0008;border:1px solid #ffffff22}.hero h1{font-size:35px;line-height:1.05;margin:18px 0 5px}.hero p{margin:0;color:#b8bac5;font-size:18px}.hero small{color:#c9cad2;font-size:15px}
+.card{border:1px solid #ffffff25;background:linear-gradient(145deg,#20252fef,#181c24e8);border-radius:28px;padding:26px 24px 25px;box-shadow:0 20px 70px #0008;text-align:center}
+.qr-box{background:#fff;border-radius:22px;padding:10px;max-width:335px;margin:0 auto 18px;color:#111}.paytm{font-family:Arial,sans-serif;font-weight:800;color:#153b82;font-size:29px;padding-top:2px}.amount{font:800 39px Arial,sans-serif;margin:4px 0 8px}.fakeqr{width:245px;height:245px;margin:auto;display:grid;place-items:center;background:
+repeating-linear-gradient(0deg,#111 0 5px,#fff 5px 10px),
+repeating-linear-gradient(90deg,transparent 0 5px,#111 5px 10px);
+background-blend-mode:multiply;position:relative;overflow:hidden}.fakeqr:before{content:"";position:absolute;inset:22px;background:
+linear-gradient(90deg,#111 0 20px,transparent 20px 40px,#111 40px 60px,transparent 60px 80px,#111 80px 100px,transparent 100px),
+linear-gradient(#111 0 20px,transparent 20px 40px,#111 40px 60px,transparent 60px 80px,#111 80px 100px);opacity:.9}.fakeqr span{position:relative;z-index:2;background:#fff;padding:4px 9px;font:bold 17px Arial;border:2px solid #111}.qr-note{font:700 12px Arial;color:#555;margin-top:9px}
+h2{font-size:25px;margin:12px 0 3px}.muted{color:#aeb2bd;margin:0 0 16px}.timer{border:1px solid #a74b56;background:#3a2027;border-radius:15px;padding:11px;color:#ff9aa1;font-size:17px}.upi{font-size:16px;line-height:1.35;color:#ddd;margin:17px 0}.upi span{color:#bfc2ca}
+button{width:100%;border:0;border-radius:16px;padding:15px 12px;font:700 19px 'Baloo 2',sans-serif;color:#fff;background:#20c878;box-shadow:0 8px 25px #20c87855;cursor:pointer}.terms{display:block;margin-top:14px;color:#aaa;font-size:13px}
+#status{margin-top:13px;font-weight:700;color:#75e5a9;min-height:22px}
+@media(max-width:430px){.page{padding-left:10px;padding-right:10px}.hero h1{font-size:30px}.card{padding:22px 15px}.fakeqr{width:220px;height:220px}}
+</style>
+</head>
+<body>
+<main class="page">
+  <div class="hero">
+    <div class="app-icon">🎮</div>
+    <h1>Free Redeem Code App</h1>
+    <p>Unlock the redeem code demo generator</p>
+    <small>🎮 App Store • Premium Access</small>
+  </div>
+
+  <section class="card">
+    <div class="qr-box">
+      <div class="paytm">PAYMENT</div>
+      <div class="amount">₹49</div>
+      <div class="fakeqr" aria-label="Demo QR placeholder"><span>DEMO QR</span></div>
+      <div class="qr-note">DEMO PAYMENT — NO MONEY IS CHARGED</div>
+    </div>
+
+    <h2>🔐 Unlock Redeem Code Generator</h2>
+    <p class="muted">Complete the ₹49 demo payment flow to continue.</p>
+
+    <div class="timer">Demo payment window: <b id="timer">09:58</b></div>
+    <p class="upi">📱 Scan using your UPI app<br><span>Google Pay • PhonePe • Paytm • BHIM</span></p>
+
+    <button onclick="unlockDemo()">🔓 Payment &amp; Unlock Demo Generator</button>
+    <div id="status"></div>
+    <a class="terms" href="#" onclick="return false">Terms &amp; Conditions</a>
+  </section>
+</main>
+
+<script>
+let seconds=598;
+const timer=document.getElementById('timer');
+setInterval(()=>{
+  if(seconds>0) seconds--;
+  const m=String(Math.floor(seconds/60)).padStart(2,'0');
+  const s=String(seconds%60).padStart(2,'0');
+  timer.textContent=m+':'+s;
+},1000);
+
+function unlockDemo(){
+  document.getElementById('status').textContent='Demo unlocked successfully — no real payment was processed.';
+}
+</script>
+</body>
+</html>
