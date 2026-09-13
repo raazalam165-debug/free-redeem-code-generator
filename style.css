@@ -1,0 +1,35 @@
+*{box-sizing:border-box}
+:root{--bg:#090c13;--card:#20242b;--text:#f7f4ed;--muted:#aaaebd;--gold:#f1d47a}
+html,body{margin:0;min-height:100%;font-family:"Baloo 2",system-ui,sans-serif;background:var(--bg);color:var(--text)}
+body{min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:
+radial-gradient(circle at 8% 15%,rgba(47,100,220,.48),transparent 32%),
+radial-gradient(circle at 88% 82%,rgba(166,57,224,.5),transparent 38%),
+linear-gradient(135deg,#172b58 0%,#0d1119 42%,#0a0d13 100%)}
+.page{width:min(100%,620px);margin:auto;padding:26px 18px 60px;text-align:center}
+.topline{color:var(--gold);font-weight:800;letter-spacing:3px;font-size:15px;margin:8px 0 12px}
+.vip{background:rgba(20,24,34,.65);border:1px solid rgba(244,214,113,.75);color:#f7dc88;border-radius:40px;padding:13px 28px;font:800 17px inherit;box-shadow:0 0 22px rgba(236,198,83,.16)}
+.hero{margin:12px 0 24px}.hero.compact{margin-top:5px}
+.app-icon{width:145px;height:145px;margin:0 auto 12px;border-radius:30px;display:grid;place-items:center;font-size:68px;background:linear-gradient(145deg,#111b37,#071122 45%,#142a56);border:1px solid #304a7b;box-shadow:0 16px 45px rgba(0,0,0,.35)}
+h1{margin:0;font-size:40px;line-height:1.05;font-weight:800;letter-spacing:.3px}
+.hero p{margin:10px 0 2px;color:#b5b5c0;font-size:19px;font-weight:700}.hero small{color:#aaaeba;font-size:14px;font-weight:700}
+.card{border:1px solid rgba(255,255,255,.16);border-radius:28px;padding:26px 24px;background:rgba(31,35,43,.88);box-shadow:0 25px 80px rgba(0,0,0,.25),0 0 55px rgba(147,56,211,.12);backdrop-filter:blur(10px)}
+.primary,.success{width:100%;border:0;border-radius:17px;color:#fff;font:800 20px inherit;padding:17px 14px;cursor:pointer}
+.primary{background:linear-gradient(90deg,#3e8df6,#7042ff);box-shadow:0 9px 27px rgba(76,100,255,.42)}
+.success{background:linear-gradient(90deg,#16c87a,#25bd70);box-shadow:0 9px 27px rgba(23,211,123,.32)}
+.note{font-size:17px;line-height:1.45;margin:18px 4px;color:#d5d5dd}.note b{color:#eee}
+.quick{margin-top:22px;text-align:left;padding:16px 18px;border-radius:20px;border:1px solid rgba(255,255,255,.12);background:rgba(40,43,49,.75)}
+.quick h3{margin:0 0 10px;color:#f2d97d;letter-spacing:1.5px;border-bottom:1px solid rgba(255,255,255,.09);padding-bottom:8px}
+.step{display:flex;gap:13px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.08)}.step:last-child{border:0}
+.step>b{display:grid;place-items:center;width:37px;height:37px;border-radius:11px;background:#3c3d3d;color:#f1dc88}.step span{display:flex;flex-direction:column}.step strong{font-size:16px}.step em{font-style:italic;color:#8f929d;font-size:13px}
+.payment-card{padding-top:25px}.qr-placeholder{width:min(100%,340px);margin:0 auto 18px;padding:15px;border-radius:18px;background:#fff;color:#111;border:7px solid #f7f7f7}
+.paytm{font-size:30px;font-weight:800;color:#087bc4}.amount{font-size:36px;font-weight:800}.fakeqr{margin:8px auto;width:220px;height:220px;border:8px solid #132d70;display:grid;place-content:center;background:repeating-linear-gradient(45deg,#111 0 6px,#fff 6px 12px);font-weight:900;font-size:30px;letter-spacing:5px}.fakeqr span{background:#fff;padding:0 6px}
+.qr-placeholder small{font:700 11px system-ui;color:#d43d3d}
+h2{font-size:25px;margin:8px 0 2px}.muted{color:#b0b2bd;font-size:15px;margin:0 0 17px}
+.timer{padding:12px;border-radius:13px;background:rgba(116,35,45,.35);border:1px solid rgba(242,97,112,.25);color:#ff9ba4;font-size:17px;margin-bottom:15px}
+.upi{font-size:15px;color:#e0e0e7;font-weight:700;line-height:1.5}.upi span{color:#a8abb6}
+.terms,.back{display:block;color:#aaaebd;margin-top:15px;font-size:13px;text-decoration:underline}.back{text-decoration:none;font-size:15px}
+.badge{display:inline-block;padding:8px 13px;border-radius:99px;background:rgba(22,194,112,.13);border:1px solid rgba(22,194,112,.35);color:#7ff0b8;font-weight:800}
+.generator-card h2{margin-top:16px}.codebox{margin:18px 0 10px;padding:17px 8px;border-radius:14px;background:#10131a;border:1px dashed #697080;color:#f5d979;font:800 20px monospace;letter-spacing:2px}
+.copy{border:1px solid #606779;background:#2a2e38;color:#fff;border-radius:12px;padding:12px 20px;font:700 15px inherit;cursor:pointer}
+@media(max-width:430px){.page{padding-left:14px;padding-right:14px}.topline{font-size:12px;letter-spacing:2px}h1{font-size:34px}.app-icon{width:135px;height:135px}.card{padding:23px 20px}.fakeqr{width:190px;height:190px}}
