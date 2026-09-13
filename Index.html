@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Interface</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #1c2738, #0b0f19 80%);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 24px 16px;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 360px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 1px;
+      color: #eab308;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .title {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: #94a3b8;
+      margin-bottom: 18px;
+    }
+
+    /* White Card Section */
+    .qr-card {
+      background: #ffffff;
+      color: #111827;
+      border-radius: 20px;
+      padding: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 0 8px;
+    }
+
+    .brand-text {
+      font-size: 20px;
+      font-weight: 900;
+      color: #002970;
+    }
+
+    .brand-text span {
+      color: #00b9f5;
+    }
+
+    .amount {
+      font-size: 22px;
+      font-weight: 800;
+      color: #111827;
+    }
+
+    .qr-image-wrapper {
+      background: #fff;
+      padding: 8px;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .qr-image-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+     <div class="upi-id">UPI ID: ashishraaz@fam</div> 
+
+
+    .app-icons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .app-tag {
+      font-size: 10px;
+      font-weight: 700;
+      background: #f1f5f9;
+      color: #475569;
+      padding: 4px 8px;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+    }
+
+    /* Payment Footer Details */
+    .action-title {
+      font-size: 14px;
+      font-weight: 700;
+      margin-top: 18px;
+      color: #fff;
+    }
+
+    .timer-pill {
+      margin: 10px auto;
+      background: rgba(225, 29, 72, 0.15);
+      border: 1px solid #f43f5e;
+      color: #fb7185;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      width: fit-content;
+    }
+
+    .scan-note {
+      font-size: 11px;
+      color: #94a3b8;
+      margin-bottom: 16px;
+    }
+
+    .pay-btn {
+      width: 100%;
+      background: #10b981;
+      color: #ffffff;
+      border: none;
+      padding: 14px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="badge">★ EXCLUSIVE ACCESS ★</div>
+    <h1 class="title">Redeem Code App</h1>
+    <p class="subtitle">Complete payment to access the code</p>
+
+    <!-- White QR Container -->
+    <div class="qr-card">
+      <div class="card-header">
+        <div class="brand-text">Pay<span>tm</span></div>
+        <div class="amount">₹49</div>
+      </div>
+
+    
+<div class="qr-image-wrapper">
+<img src="qr.png" alt="Payment QR Code">
+</div>
+
+
+      <div class="upi-id">UPI ID: your-upi-id@bank</div>
+
+      <div class="app-icons">
+        <span class="app-tag">GPay</span>
+        <span class="app-tag">PhonePe</span>
+        <span class="app-tag">Paytm</span>
+        <span class="app-tag">BHIM</span>
+      </div>
+    </div>
+
+    <!-- Timer and Button -->
+    <div class="action-title">🔒 Complete Payment to Unlock</div>
+    <div class="timer-pill" id="timer">Complete payment within 10:00</div>
+    <div class="scan-note">Scan the QR using any UPI app</div>
+
+    <button class="pay-btn">Payment & Unlock Generator</button>
+  </div>
+
+  <script>
+    // 10 मिनट का टाइमर
+    let duration = 10 * 60;
+    const display = document.getElementById('timer');
+
+    setInterval(() => {
+      let minutes = Math.floor(duration / 60);
+      let seconds = duration % 60;
+
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      seconds = seconds < 10 ? '0' + seconds : seconds;
+
+      display.textContent = `Complete payment within ${minutes}:${seconds}`;
+
+      if (duration > 0) {
+        duration--;
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
